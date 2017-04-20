@@ -1,0 +1,97 @@
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans');
+@import '~normalize.css/normalize';
+@import 'animations.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+nav {
+  text-align: center;
+
+  > a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 1em;
+  }
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@media all and (orientation:landscape) {
+  body {
+    font-size: 2.5vw;
+  }
+
+  #footer,
+  #header,
+  #main {
+    padding: 2vw;
+  }
+
+  #footer {
+    font-size: 1.5vw;
+  }
+}
+
+@media all and (orientation:portrait) {
+  body {
+    font-size: 2.5vh;
+  }
+
+  #footer,
+  #header,
+  #main {
+    padding: 2vh;
+  }
+
+  #footer {
+    font-size: 1.5vh;
+  }
+}
